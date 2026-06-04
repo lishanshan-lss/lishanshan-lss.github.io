@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shanshan Li | Personal Website</title>
+    <meta
+      name="description"
+      content="A simple personal website for short introduction, academic projects, and fun projects."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="view-intro">
+    <header class="site-header">
+      <a class="site-name" href="#intro"><span>Shanshan Li</span><span class="chinese-name">李姗珊</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="is-active" href="#intro" aria-current="page">About me</a>
+        <a href="#academic">Project academic</a>
+        <a href="#fun">Project fun</a>
+        <a href="#past-lives">Past Lives</a>
+        <a href="#company">The company I keep</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section id="intro" class="section intro-section is-active">
+        <div class="intro-layout">
+          <div>
+            <p class="section-label">About me</p>
+            <h1>I study memory, behavior, and the signals in between</h1>
+            <p class="intro">
+               I am a fourth-year PhD candidate in cognitive neuroscience. I study how the brain holds information in mind to support flexible behavior, using neuroimaging and computational modeling to link neural signals, memory representations, and behavior.
+            </p>
+          </div>
+          <figure class="profile-photo" aria-label="Profile photo">
+            <img
+              src="profile.jpeg"
+              alt="Portrait of Shanshan"
+              onerror="this.hidden = true"
+            />
+            <span>S</span>
+          </figure>
+        </div>
+      </section>
+
+      <section id="academic" class="section">
+        <p class="section-label">Project academic</p>
+        <div class="section-title-row">
+          <h2>Academic projects</h2>
+          <p>
+            I am part of a global PhD program and work across two labs: the Clayton Curtis Lab in New York City and the Kartik Sreenivasan Lab in Abu Dhabi.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-item">
+            <h3>How do we cope with effortful tasks?</h3>
+            <p>
+              In this study, we asked how effort sculps the memory we hold in
+              mind. Using fMRI, we found that higher cognitive effort increased
+              prefrontal activity, which in turns improved memory fidelity, linking effort, top-down control, and the quality of remembered information. I contributed the last part of analysis to this collaborative project.
+            </p>
+            <p class="project-citation">
+              Master, S. L., Li, S., & Curtis, C. E. (2024).
+              <a href="https://doi.org/10.1523/JNEUROSCI.0060-24.2024" target="_blank" rel="noopener noreferrer">
+                Trying Harder: How Cognitive Effort Sculpts Neural
+                Representations during Working Memory
+              </a>. <em>The Journal of Neuroscience, 44</em>(28),
+              e0060242024.
+            </p>
+          </article>
+          <article class="project-item project-note">
+            <h3>To be continued...</h3>
+            <p>
+              Some projects are still becoming projects :)
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="fun" class="section">
+        <p class="section-label">Project fun</p>
+        <div class="section-title-row">
+          <h2>Fun projects</h2>
+          <p>
+            What are we without music, film, and all the other cultural products we consume? I am interested in what these choices say about who we are.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-item project-note">
+            <h3>To be continued...</h3>
+            <p>
+              Some projects are still becoming projects :)
+            </p>
+          </article>
+          <article class="project-item">
+            <h3> </h3>
+            <p>
+               
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="past-lives" class="section">
+        <p class="section-label">Past Lives</p>
+        <div class="section-title-row">
+          <h2>Past Lives</h2>
+          <p>
+            Before the PhD, I spent several years working between neuroscience
+            and public writing: writing, editing, translating, and helping scientific ideas travel outside.
+          </p>
+        </div>
+
+        <div class="past-life-list">
+          <article class="past-life-item">
+            <div class="past-life-heading">
+              <p class="past-life-meta">Editor and writer</p>
+              <h3>Science communication in Chinese</h3>
+            </div>
+            <div class="past-life-copy">
+              <p>
+                I worked for Neu-reality, a Chinese non-profit science
+                communication website, for several years, editing neuroscience
+                writing and publishing articles for a broader public audience.
+                I also worked with the online department of the Chinese edition
+                of <em>Scientific American</em>, gaining experience in digital
+                science publishing.
+              </p>
+              <a href="https://neu-reality.com/2025/01/memory-manipulation/" target="_blank" rel="noopener noreferrer">
+                Read an example article
+              </a>
+            </div>
+            <figure class="past-life-figure">
+              <img src="past-life-memory.jpg" alt="Illustration from a Neu-reality article about memory manipulation" />
+            </figure>
+          </article>
+
+          <article class="past-life-item">
+            <div class="past-life-heading">
+              <p class="past-life-meta">Book translation</p>
+              <h3>The Self Delusion</h3>
+            </div>
+            <div class="past-life-copy">
+              <p>
+                I translated Gregory Berns&apos;s <em>The Self Delusion: The New
+                Neuroscience of How We Invent—and Reinvent—Our Identities</em>
+                into Chinese. The translation has not yet been published.
+              </p>
+            </div>
+            <figure class="past-life-figure book-cover">
+              <img src="past-life-book.jpg" alt="Cover of The Self Delusion by Gregory Berns" />
+            </figure>
+          </article>
+        </div>
+      </section>
+
+      <section id="company" class="section">
+        <p class="section-label">The company I keep</p>
+        <div class="section-title-row">
+          <h2>The company I keep</h2>
+          <p>
+            :)
+          </p>
+        </div>
+
+        <div class="company-grid">
+          <figure class="company-item">
+            <div class="company-photo">
+              <img
+                src="company-1.jpeg"
+                alt="Company photo one"
+                onerror="this.hidden = true"
+              />
+              <span>01</span>
+            </div>
+            <figcaption>It has been 16 years since I kidnapped Miumiu from the street. Since then, she has brought me so much joy with her fluffy cuteness, and has constantly reminded me to be honest about what I want, no matter what people say.</figcaption>
+          </figure>
+
+          <figure class="company-item">
+            <div class="company-photo">
+              <img
+                src="company-2.jpeg"
+                alt="Company photo two"
+                onerror="this.hidden = true"
+              />
+              <span>02</span>
+            </div>
+            <figcaption>This research life has not always been easy, but adventures are more fun with good company — check out Dinghao’s <a href="https://dinghaoluo.github.io/" target="_blank" rel="noopener noreferrer">page</a>!</figcaption>
+          </figure>
+
+          <figure class="company-item">
+            <div class="company-photo">
+              <img
+                src="company-3.jpeg"
+                alt="Company photo three"
+                onerror="this.hidden = true"
+              />
+              <span>03</span>
+            </div>
+            <figcaption>
+              Jelly and Kira are no longer with us, but I still carry them with me.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Shanshan</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
