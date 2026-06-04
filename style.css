@@ -5,35 +5,41 @@
   --photo-line: rgba(23, 23, 23, 0.18);
   --background: #fbf7ef;
   --header-background: rgba(251, 247, 239, 0.92);
+  --nav-underline: currentColor;
 }
 
 body.view-intro {
   --line: rgba(251, 247, 239, 0.62);
   --background: #aebdb8;
   --header-background: rgba(174, 189, 184, 0.92);
+  --nav-underline: #fbf7ef;
 }
 
 body.view-academic {
   --background: #fbf7ef;
   --header-background: rgba(251, 247, 239, 0.92);
+  --nav-underline: currentColor;
 }
 
 body.view-fun {
   --line: rgba(251, 247, 239, 0.62);
   --background: #efd2c2;
   --header-background: rgba(239, 210, 194, 0.92);
+  --nav-underline: #fbf7ef;
 }
 
 body.view-past-lives {
   --line: rgba(251, 247, 239, 0.62);
   --background: #d8d4e2;
   --header-background: rgba(216, 212, 226, 0.92);
+  --nav-underline: #fbf7ef;
 }
 
 body.view-company {
   --line: rgba(251, 247, 239, 0.62);
   --background: #d6e4eb;
   --header-background: rgba(214, 228, 235, 0.92);
+  --nav-underline: #fbf7ef;
 }
 
 * {
@@ -105,6 +111,7 @@ a {
 
 .nav a.is-active {
   text-decoration: underline;
+  text-decoration-color: var(--nav-underline);
   text-decoration-thickness: 1px;
   text-underline-offset: 6px;
 }
@@ -326,9 +333,10 @@ h3 {
 .company-photo {
   align-items: center;
   aspect-ratio: 4 / 3;
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(23, 23, 23, 0.24);
+  border-radius: 2px;
+  box-shadow: none;
   display: flex;
   justify-content: center;
   margin-bottom: 12px;
