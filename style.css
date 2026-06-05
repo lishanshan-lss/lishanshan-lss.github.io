@@ -15,6 +15,40 @@ body.view-intro {
   --nav-underline: #fbf7ef;
 }
 
+body.view-cover {
+  --text: #fbf7ef;
+  --muted: rgba(251, 247, 239, 0.74);
+  --line: rgba(251, 247, 239, 0.34);
+  --background: #3e668f;
+  --header-background: rgba(62, 102, 143, 0.92);
+  --nav-underline: #fbf7ef;
+  --cover-blue-width: 54.5%;
+}
+
+body.view-cover::before,
+body.view-cover::after {
+  content: "";
+  inset: 0;
+  position: fixed;
+  z-index: -2;
+}
+
+body.view-cover::before {
+  background: linear-gradient(
+    90deg,
+    #3e668f 0 var(--cover-blue-width),
+    transparent var(--cover-blue-width) 100%
+  );
+}
+
+body.view-cover::after {
+  background-image: url("cover-photo.jpeg");
+  background-position: center;
+  background-size: cover;
+  left: var(--cover-blue-width);
+  z-index: -1;
+}
+
 body.view-academic {
   --background: #fbf7ef;
   --header-background: rgba(251, 247, 239, 0.92);
@@ -70,11 +104,11 @@ a {
   border-bottom: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  max-width: 980px;
+  margin: 0;
+  max-width: none;
   padding: 22px 24px;
-  position: sticky;
-  top: 0;
+  position: relative;
+  width: 100%;
 }
 
 .site-name {
@@ -137,6 +171,12 @@ main {
   padding-top: 112px;
 }
 
+.cover-section {
+  border-bottom: 0;
+  min-height: 100vh;
+  padding: 0;
+}
+
 .section-label {
   color: var(--muted);
   font-size: 0.86rem;
@@ -185,6 +225,46 @@ h3 {
   display: grid;
   gap: 52px;
   grid-template-columns: minmax(0, 1fr) 220px;
+}
+
+.cover-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.cover-copy {
+  align-items: flex-start;
+  display: flex;
+  min-height: 100vh;
+  padding: clamp(44px, 7vh, 70px) 0 76px;
+  position: sticky;
+  top: 0;
+}
+
+.cover-copy-inner {
+  max-width: 620px;
+}
+
+.cover-title-placeholder {
+  visibility: hidden;
+}
+
+.cover-spacer {
+  min-height: 100vh;
+  position: relative;
+}
+
+.cover-caption {
+  bottom: 30px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 0;
+  max-width: 340px;
+  position: fixed;
+  right: 30px;
+  text-align: right;
 }
 
 .profile-photo {
@@ -386,6 +466,18 @@ h3 {
 }
 
 @media (max-width: 700px) {
+  body.view-cover::before {
+    background: #3e668f;
+  }
+
+  body.view-cover::after {
+    background-position: center;
+    height: 48vh;
+    inset: auto 0 0 0;
+    left: 0;
+    opacity: 0.92;
+  }
+
   .site-header {
     align-items: flex-start;
     flex-direction: column;
@@ -405,14 +497,43 @@ h3 {
     padding-top: 78px;
   }
 
+  .cover-section {
+    min-height: 100vh;
+    padding: 0;
+  }
+
   .intro-layout {
     align-items: start;
     gap: 28px;
     grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .cover-layout {
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+
+  .cover-copy {
+    align-items: start;
+    min-height: 100vh;
+    padding: 58px 24px 52vh;
+    position: relative;
+  }
+
+  .cover-spacer {
+    display: none;
+  }
+
+  .cover-caption {
+    bottom: 18px;
+    left: 24px;
+    max-width: calc(100vw - 48px);
+    right: 24px;
   }
 
   .profile-photo {
-    margin-left: 0;
+    margin: 0;
     width: 188px;
   }
 
