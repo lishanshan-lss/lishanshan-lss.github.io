@@ -247,7 +247,8 @@ h3 {
 }
 
 .cover-title-placeholder {
-  visibility: hidden;
+  display: block;
+  min-height: clamp(7.65rem, 14.3vw, 14.1rem);
 }
 
 .cover-spacer {
