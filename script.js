@@ -18,6 +18,7 @@ function showSection(sectionId) {
   });
 
   const viewClasses = [
+    "view-cover",
     "view-intro",
     "view-academic",
     "view-fun",
